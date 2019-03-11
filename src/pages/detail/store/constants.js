@@ -1,0 +1,1 @@
+export const CHANGE_DETAIL = 'datial/CHANGE_DETAIL';
