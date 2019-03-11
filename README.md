@@ -1,2 +1,2 @@
-# jianshu
-这是我用react做的仿简书网页
+#####npm install
+#####npm start
