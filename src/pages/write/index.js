@@ -11,7 +11,7 @@ class Write extends PureComponent{
         }else{
             return <Redirect to='/login'/>
         }
-       
+
     }
 
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  .parent{
+    width: 200px;
+    height: 100px;
+    position: relative;
+  }
+  .children{
+    width: 20px;
+    height: 20px;
+    background: aqua;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  .nmsl{
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>
+<body>
+<div class="parent">
+  <div class="children">
+  </div>
+</div>
+</body>
+<script>
+  var a = [6,7,8,2,5,9,8,8,8,8,8,8,8,8,8,88,96,456,488,250];
+  var temp = ''
+  a.reduce((pre,cur)=>{
+    if(!pre.includes(cur)){
+      pre.push(cur)
+      return pre
+    }
+    else {
+      return pre
+    }
+
+  },[])
+  // for(let j=0;j<a.length;j++){
+  //   for (let p = j+1;p<a.length;p++){
+  //     if(a[j]>a[p]){
+  //       temp=a[j]
+  //       a[j]=a[p]
+  //       a[p]=temp
+  //     }
+  //   }
+  // }
+  console.log(a)
+</script>
+</html>

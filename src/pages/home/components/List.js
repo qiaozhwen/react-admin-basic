@@ -3,10 +3,11 @@ import { ListItem, ListInfo,LoadMore } from '../style';
 import { connect } from 'react-redux';
 import { actionCreators } from '../store';
 import { Link } from 'react-router-dom';
+import Header from "../../../common/header";
 class List extends PureComponent {
     render() {
         const { list ,getMoreList,page } = this.props;
-       
+
         return (
             <div>
                 {

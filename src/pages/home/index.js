@@ -2,14 +2,14 @@ import React, { PureComponent } from 'react';
 import { HomeWrapper, HomeLeft, HomeRight,BackTop } from './style';
 import Topic from './components/Topic';
 import List from './components/List';
-import SimpleSlider from './components/SimpleSlider'; 
+import SimpleSlider from './components/SimpleSlider';
 import Recommend from './components/Recommend';
 import {actionCreators} from './store';
 import {connect} from 'react-redux';
 
 class Home extends PureComponent {
 
-    
+
 
     handleScrollTop(){
         window.scrollTo(0,0);
@@ -27,10 +27,10 @@ class Home extends PureComponent {
                 </HomeLeft>
                 <HomeRight>
                     <Recommend/>
-                    
+
                 </HomeRight>
                 {this.props.showScroll ?<BackTop onClick={this.handleScrollTop}>回到顶部</BackTop>:null}
-                
+
             </HomeWrapper>
         )
     }
@@ -69,7 +69,7 @@ const mapDispath = (dispatch)=>({
         }else{
             dispatch(actionCreators.toggleTopShow(false))
         }
-        
+
     }
 })
 

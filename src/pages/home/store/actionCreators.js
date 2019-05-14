@@ -21,21 +21,27 @@ export const getHomeInfo = ()=>{
     return (dispatch)=>{
         axios.get('/api/home.json').then((res)=>{
             const result = res.data.data;
+            result.slickList.shift()
+            result.articleList.map(j => {
+              j.imgUrl = 'https://cubelet.cn/1556176941309.jpeg'
+              return j
+            });
+            console.log(result)
             const action = changeHomeDate(result);
             dispatch(action);
-            
+
 
         })
     }
 }
 export const getMoreList = (page)=>{
     return (dispatch)=>{
-        axios.get('/api/homeList.json?page='+page).then((res)=>{
+        axios.get(`/api/homeList.json?page=${page}`).then((res)=>{
             const result = res.data.data;
-            
+
             dispatch(addHomeList(result,page+1))
-         
-            
+
+
 
         })
     }

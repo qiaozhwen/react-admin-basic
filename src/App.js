@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './common/header/index';
 import store from './store/index';
 import { Provider } from 'react-redux';
-import {BrowserRouter,Route} from 'react-router-dom';
+import {BrowserRouter,Route,Link} from 'react-router-dom';
 import Home from './pages/home';
 import Detail from './pages/detail/loadable';
 import Login from './pages/login';
@@ -11,10 +11,10 @@ import Write from './pages/write';
 class App extends Component {
   render() {
     return (
-      
+
       <Provider store={store}>
-     
-      
+
+
       <BrowserRouter>
         <div>
         <Header />
@@ -24,7 +24,7 @@ class App extends Component {
         <Route path='/detail/:id' exact component={Detail}></Route>
         </div>
       </BrowserRouter>
-     
+
       </Provider>
     );
   }
